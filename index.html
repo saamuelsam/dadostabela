@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados da Tabela</title>
+    <style>
+        /* Estilo da tabela */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Estilo inicial da linha */
+        .clicked {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Telefone 1</th>
+            <th>Telefone 2</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr id="row1">
+          <td>José Cloves Rodrigues dos Santos</td>
+          <td><a href="https://wa.me/5585982179360?text=Olá%20José,%20como%20vai?">(85)98217-9360</a></td>
+          <td><a href="https://wa.me/5585982288205?text=Oi%20José,%20tudo%20bem?">(85)98228-8205</a></td>
+          <td><button onclick="mudarCor('row1')">Concluído</button></td>
+      </tr>
+      <tr id="row2">
+          <td>KELVIS  DAVI  DE  MOURA  SOUZA</td>
+          <td><a href="https://wa.me/5585992691414?text=Olá%20KELVIS,%20como%20vai?">(85)99269-1414</a></td>
+          <td><a href="https://wa.me/5585988261342?text=Oi%20KELVIS,%20tudo%20bem?">(85)98826-1342</a></td>
+          <td><button onclick="mudarCor('row2')">Concluído</button></td>
+      </tr>
+      <tr id="row3">
+          <td>MARIA  DAS  GRACAS  FREITAS  DE  ANDRADE</td>
+          <td><a href="https://wa.me/5585996876902?text=Olá%20MARIA,%20como%20vai?">(85)99687-6902</a></td>
+          <td><a href="https://wa.me/5585988618563?text=Oi%20MARIA,%20tudo%20bem?">(85)98861-8563</a></td>
+          <td><button onclick="mudarCor('row3')">Concluído</button></td>
+      </tr>
+      <tr id="row4">
+          <td>FRANCISCO  JAIRO  DE  MIRANDA  SILVA  JAIRO  DE  MIRANDA  SILVA</td>
+          <td><a href="https://wa.me/5585988449090?text=Olá%20FRANCISCO,%20como%20vai?">(85)98844-9090</a></td>
+          <td><a href="https://wa.me/5585985753460?text=Oi%20FRANCISCO,%20tudo%20bem?">(85)98575-3460</a></td>
+          <td><button onclick="mudarCor('row4')">Concluído</button></td>
+      </tr>
+      <tr id="row5">
+          <td>HAROLDO  FERREIRA  LOPES</td>
+          <td><a href="https://wa.me/5585991336789?text=Olá%20HAROLDO,%20como%20vai?">(85)99133-6789</a></td>
+          <td><a href="https://wa.me/5585986256590?text=Oi%20HAROLDO,%20tudo%20bem?">(85)98625-6590</a></td>
+          <td><button onclick="mudarCor('row5')">Concluído</button></td>
+      </tr>
+      <tr id="row6">
+          <td>LUIZ  ANTONIO  PESSOA  DOS  SANTOS</td>
+          <td><a href="https://wa.me/5585996468723?text=Olá%20LUIZ,%20como%20vai?">(85)9964-68723</a></td>
+          <td><a href="https://wa.me/5585985283123?text=Oi%20LUIZ,%20tudo%20bem?">(85)98528-3123</a></td>
+          <td><button onclick="mudarCor('row6')">Concluído</button></td>
+      </tr>
+      <tr id="row7">
+          <td>GABRIEL  NASCIMENTO  DE  SOUSA</td>
+          <td><a href="https://wa.me/5585987170682?text=Olá%20GABRIEL,%20como%20vai?">(85)98717-0682</a></td>
+          <td><a href="https://wa.me/5585989166256?text=Oi%20GABRIEL,%20tudo%20bem?">(85)98916-6256</a></td>
+          <td><button onclick="mudarCor('row7')">Concluído</button></td>
+      </tr>
+      <tr id="row8">
+          <td>FRANCISCO  EDIVAN  SILVA  LUSTOSA</td>
+          <td><a href="https://wa.me/5585987598427?text=Olá%20FRANCISCO,%20como%20vai?">(85)98759-8427</a></td>
+          <td><a href="https://wa.me/5585989166256?text=Oi%20FRANCISCO,%20tudo%20bem?">(85)98916-6256</a></td>
+          <td><button onclick="mudarCor('row8')">Concluído</button></td>
+      </tr>
+      <tr id="row9">
+          <td>DAVID  DEMETRIO  DOS  SANTOS</td>
+          <td><a href="https://wa.me/5585996326797?text=Olá%20DAVID,%20como%20vai?">(85)9963-26797</a></td>
+          <td><a href="https://wa.me/5585981858974?text=Oi%20DAVID,%20tudo%20bem?">(85)9818-58974</a></td>
+          <td><button onclick="mudarCor('row9')">Concluído</button></td>
+      </tr>
+      <tr id="row10">
+          <td>FRANCISCO  RONIELY  BERNARDO  DA  SILVA</td>
+          <td><a href="https://wa.me/5585992454640?text=Olá%20FRANCISCO,%20como%20vai?">(85)99245-4640</a></td>
+          <td><a href="https://wa.me/5585985035585?text=Oi%20FRANCISCO,%20tudo%20bem?">(85)98503-5585</a></td>
+          <td><button onclick="mudarCor('row10')">Concluído</button></td>
+      </tr>
+      <!-- Adicione as demais linhas conforme necessário -->
+    </tbody>
+</table>
+
+<script>
+    function mudarCor(rowId) {
+        var row = document.getElementById(rowId);
+        row.classList.toggle('clicked');
+    }
+</script>
+
+</body>
+</html>
